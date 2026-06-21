@@ -41,9 +41,9 @@ export default function Resume({ lang }: { lang: "de" | "en" | "it" }) {
               {lang === "de" ? "Systemarchitektur & Karriere" : lang === "en" ? "System Architecture & Career" : "Architettura di Sistema & Carriera"}
             </h2>
             <p className="text-neutral-400 max-w-2xl leading-relaxed text-lg text-center md:text-left">
-              {lang === "de" && "Erfolgreich abgeschlossener Informatiker Plattformentwickler EFZ mit grosser Leidenschaft für die Softwareentwicklung. Mein Ziel: Fundiertes Infrastruktur-Wissen mit Fullstack- & AI-Skills zu kombinieren, um innovative und sichere Webanwendungen zu bauen."}
-              {lang === "en" && "Successfully graduated IT Platform Engineer (EFZ) with a strong passion for software development. My goal: Combining profound infrastructure knowledge with Fullstack & AI skills to build innovative, secure web applications."}
-              {lang === "it" && "Ingegnere di Piattaforma IT (EFZ) diplomato con successo, con una forte passione per lo sviluppo di software. Il mio obiettivo: Combinare profonde conoscenze infrastrutturali con competenze Fullstack & AI per creare applicazioni web innovative e sicure."}
+              {lang === "de" && "Informatiker EFZ mit 3 Jahren Erfahrung in IT-Infrastruktur, Netzwerk & Endpoint-Management. Erfolgreich abgeschlossen mit guter Note. Ziel: Dieses Fundament in eine DevOps Engineering Karriere überführen — Containerisierung, CI/CD-Pipelines, Infrastructure as Code und Cloud-Automation."}
+              {lang === "en" && "IT Engineer EFZ with 3 years of experience in infrastructure, networking & endpoint management. Graduated with a strong mark. Goal: Channel this foundation into DevOps Engineering — containerisation, CI/CD pipelines, Infrastructure as Code, and cloud automation."}
+              {lang === "it" && "Ingegnere IT EFZ con 3 anni di esperienza in infrastruttura, reti e endpoint management. Diplomato con ottimo voto. Obiettivo: Trasformare questa base in una carriera DevOps — containerizzazione, pipeline CI/CD, Infrastructure as Code e automazione cloud."}
             </p>
           </div>
         </div>
@@ -120,10 +120,13 @@ export default function Resume({ lang }: { lang: "de" | "en" | "it" }) {
               
               <div className="space-y-12">
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="relative pl-8 border-l-2 border-emerald-900/50">
-                  <div className="absolute w-4 h-4 bg-emerald-500 rounded-full -left-[9px] top-1 shadow-[0_0_10px_rgba(16,185,129,0.5)]"></div>
-                  <span className="text-emerald-400 font-mono text-sm font-bold">2025 – 2026</span>
+                  <div className="absolute w-4 h-4 bg-neutral-700 rounded-full -left-[9px] top-1"></div>
+                  <span className="text-neutral-500 font-mono text-sm font-bold">2025 – 2026</span>
                   <h4 className="text-xl font-bold text-white mt-1">Gewerblich-industrielles Bildungszentrum Zug (GIBZ)</h4>
                   <p className="text-neutral-400 font-mono text-sm mb-2">{lang === "de" ? "Informatiker Plattformentwickler EFZ" : lang === "en" ? "IT Platform Engineer EFZ" : "Ingegnere di Piattaforma EFZ"}</p>
+                  <span className="inline-flex items-center gap-1 text-xs bg-emerald-950/50 text-emerald-400 border border-emerald-800 px-2 py-0.5 rounded font-mono">
+                    ✓ {lang === "de" ? "Abgeschlossen — Bestanden mit guter Note" : lang === "en" ? "Completed — Passed with good grade" : "Completato — Superato con ottimo voto"}
+                  </span>
                 </motion.div>
 
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="relative pl-8 border-l-2 border-emerald-900/50">
@@ -131,6 +134,7 @@ export default function Resume({ lang }: { lang: "de" | "en" | "it" }) {
                   <span className="text-neutral-500 font-mono text-sm font-bold">2022 – 2025</span>
                   <h4 className="text-xl font-bold text-white mt-1">Technische Berufsschule Zürich (TBZ)</h4>
                   <p className="text-neutral-400 font-mono text-sm mb-2">{lang === "de" ? "Informatiker Plattformentwickler EFZ" : lang === "en" ? "IT Platform Engineer EFZ" : "Ingegnere di Piattaforma EFZ"}</p>
+                  <span className="text-xs text-neutral-600 font-mono">✓ {lang === "de" ? "Abgeschlossen" : lang === "en" ? "Completed" : "Completato"}</span>
                 </motion.div>
 
                 <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="relative pl-8 border-l-2 border-transparent">
@@ -227,6 +231,20 @@ export default function Resume({ lang }: { lang: "de" | "en" | "it" }) {
                 <Award className="text-emerald-500" /> {lang === "de" ? "Lizenzen & Zertifikate" : lang === "en" ? "Licenses & Certs" : "Licenze & Certificati"}
               </h3>
               <div className="space-y-4">
+                <div className="bg-emerald-950/30 border border-emerald-700/60 p-4 rounded-lg relative overflow-hidden">
+                  <div className="absolute top-0 right-0 w-16 h-16 bg-emerald-500/10 rounded-bl-full"></div>
+                  <div className="flex items-start justify-between">
+                    <div>
+                      <h4 className="font-bold text-emerald-300 text-sm">
+                        {lang === "de" ? "Informatiker EFZ — Plattformentwicklung" : lang === "en" ? "IT Engineer EFZ — Platform Development" : "Informatico EFZ — Sviluppo Piattaforme"}
+                      </h4>
+                      <p className="text-xs text-neutral-400 mt-1">
+                        {lang === "de" ? "Eidgenössisches Fähigkeitszeugnis · Bestanden mit guter Note" : lang === "en" ? "Swiss Federal Certificate of Competence · Passed with good grade" : "Certificato federale di capacità svizzero · Superato con ottimo voto"}
+                      </p>
+                    </div>
+                    <span className="text-xs font-mono text-emerald-500 shrink-0 ml-2">2026</span>
+                  </div>
+                </div>
                 <div className="bg-emerald-950/20 border border-emerald-900/50 p-4 rounded-lg relative overflow-hidden">
                   <div className="absolute top-0 right-0 w-16 h-16 bg-emerald-500/10 rounded-bl-full"></div>
                   <h4 className="font-bold text-emerald-400">Scrimba: Learn HTML & CSS</h4>
@@ -330,9 +348,9 @@ export default function Resume({ lang }: { lang: "de" | "en" | "it" }) {
                 )}
 
                 <div className="border-t border-neutral-800 pt-4 mt-4">
-                  <div className="text-emerald-400 mb-1">$&gt; sys.await("Final_QV_Grade")</div>
-                  <div className="text-neutral-400 font-bold bg-neutral-800 inline-block px-2 py-0.5 rounded animate-pulse">
-                    {lang === "de" ? "Status: Ausstehend (Sommer 2026)" : lang === "en" ? "Status: Pending (Summer 2026)" : "Stato: In attesa (Estate 2026)"}
+                  <div className="text-emerald-400 mb-1">$&gt; sys.get("EFZ_Result")</div>
+                  <div className="text-neutral-900 font-bold bg-emerald-500 inline-block px-2 py-0.5 rounded">
+                    ✓ {lang === "de" ? "Bestanden mit guter Note" : lang === "en" ? "Passed with good grade" : "Superato con ottimo voto"}
                   </div>
                 </div>
               </div>
@@ -407,6 +425,12 @@ export default function Resume({ lang }: { lang: "de" | "en" | "it" }) {
           </div>
           
           <div className="flex flex-wrap gap-4">
+              <a href="https://www.linkedin.com/in/dante-pangione-2bbb83280/" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-neutral-300 hover:text-emerald-400 transition-colors text-sm font-mono border border-neutral-800 hover:border-emerald-500/50 bg-[#0a0a0a] px-4 py-2.5 rounded-lg">
+                <Linkedin size={16} className="text-blue-400" /> LinkedIn
+              </a>
+              <a href="https://github.com/dantedev1197" target="_blank" rel="noreferrer" className="flex items-center gap-2 text-neutral-300 hover:text-emerald-400 transition-colors text-sm font-mono border border-neutral-800 hover:border-emerald-500/50 bg-[#0a0a0a] px-4 py-2.5 rounded-lg">
+                <Github size={16} className="text-neutral-400" /> GitHub
+              </a>
             {/* DOWNLOAD BUTTON */}
             <a href="/cv.pdf" download="Dante_Pangione_CV.pdf" className="flex items-center gap-2 text-neutral-900 bg-emerald-500 hover:bg-emerald-400 transition-colors text-sm font-bold px-5 py-2.5 rounded-lg shadow-[0_0_15px_rgba(16,185,129,0.3)]">
               <Download size={16} /> {lang === "de" ? "CV Herunterladen" : lang === "en" ? "Download CV" : "Scarica il CV"}
